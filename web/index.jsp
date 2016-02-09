@@ -36,7 +36,7 @@
     <body>
         <h1>Cliente CalculadoraService</h1>
         <hr/>
-        <form>
+        <form action="CalculadoraServlet" method="POST">
             <table align=center>
                 <tr align="center">
                     <td align=center colspan = 3>
@@ -49,7 +49,10 @@
                 
                 <tr align="center">
                     <td align=center colspan = 4>
-                        <input type="text" name="ans" size=30>
+                        <input type="text" name="ans" size=30 <%
+                            String ans=request.getParameter("ans");
+                            if(ans!=null) out.print("value=\""+ans+"\"");
+                        %>>
                     </td>
                 </tr>
 
