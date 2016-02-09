@@ -48,9 +48,10 @@ public class CalculadoraServlet extends HttpServlet {
             math.CalculadoraService_Service service = new math.CalculadoraService_Service();
             math.CalculadoraService port = service.getCalculadoraServicePort();
             
-            double num = Double.parseDouble(request.getParameter("num"));
-            double ans = Double.parseDouble(request.getParameter("ans"));
             String op = request.getParameter("op");
+            String ansParam = request.getParameter("ans");
+            double num = Double.parseDouble(request.getParameter("num"));
+            double ans = ansParam!=null&&!ansParam.isEmpty()?Double.parseDouble(ansParam):0;
             
             if(op.equals("+")){
                 ans=port.suma((int)num, (int)ans);
@@ -60,6 +61,28 @@ public class CalculadoraServlet extends HttpServlet {
                 ans=port.multiplicacion(num, ans);
             }else if(op.equals("/")){
                 ans=port.division(num, ans);
+            }else if(op.equals("/E")){
+                ans=port.divisionEntera((int)num, (int)ans);
+            }else if(op.equals("!")){
+                ans=port.factorial((int)num);
+            }else if(op.equals("raiz")){
+                ans=port.raizCuadrada(num);
+            }else if(op.equals("^")){
+                ans=port.potencia(num, ans);
+            }else if(op.equals("mod")){
+                ans=port.residuo((int)num, (int)ans);
+            }else if(op.equals("sen")){
+                ans=port.seno(num);
+            }else if(op.equals("cos")){
+                ans=port.coseno(num);
+            }else if(op.equals("tan")){
+                ans=port.tangente(num);
+            }else if(op.equals("asen")){
+                ans=port.arcoseno(num);
+            }else if(op.equals("acos")){
+                ans=port.arcocoseno(num);
+            }else if(op.equals("atan")){
+                ans=port.arcotangente(num);
             }
             response.sendRedirect("index.jsp?ans="+ans);
         } catch(Exception ex){

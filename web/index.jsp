@@ -58,6 +58,62 @@
 
                 <tr align=center>
                     <td>
+                        <input type="button" value="   sen   "
+                               onClick="setOp(this.form, 'sen')">
+                    </td>
+                    <td>
+                        <input type="button" value="   cos   "
+                               onClick="setOp(this.form, 'cos')">
+                    </td>
+                    <td>
+                        <input type="button" value="   tan   "
+                               onClick="setOp(this.form, 'tan')">
+                    </td>
+                    <td>
+                        <input type="button" value="  raiz  "
+                               onClick="setOp(this.form, 'raiz')">
+                    </td>
+                </tr>
+                
+                <tr align=center>
+                    <td>
+                        <input type="button" value="  asen  "
+                               onClick="setOp(this.form, 'asen')">
+                    </td>
+                    <td>
+                        <input type="button" value="  acos  "
+                               onClick="setOp(this.form, 'acos')">
+                    </td>
+                    <td>
+                        <input type="button" value="  atan  "
+                               onClick="setOp(this.form, 'atan')">
+                    </td>
+                    <td>
+                        <input type="button" value="    ^    "
+                               onClick="setOp(this.form, '^')">
+                    </td>
+                </tr>
+                
+                <tr align=center>
+                    <td>
+                        <input type="button" value="   mod  "
+                               onClick="setOp(this.form, 'mod')">
+                    </td>
+                    <td>
+                        <input type="button" value="    !    "
+                               onClick="setOp(this.form, '!')">
+                    </td>
+                    <td>
+                        <input type="button" value="   / E   "
+                               onClick="setOp(this.form, '/E')">
+                    </td>
+                    <td>
+                        <input type="button" value="         ">
+                    </td>
+                </tr>
+                
+                <tr align=center>
+                    <td>
                         <input type="button" value="    7    "
                                onClick="addChar(this.form.ans, '7')">
                     </td>
