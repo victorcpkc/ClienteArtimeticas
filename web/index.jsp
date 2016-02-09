@@ -39,7 +39,7 @@
         <form action="CalculadoraServlet" method="POST">
             <table align=center>
                 <tr align="center">
-                    <td align=center colspan = 3>
+                    <td align=left colspan = 3>
                         <input type="text" name="num" size=21 readonly>
                     </td>
                     <td>
